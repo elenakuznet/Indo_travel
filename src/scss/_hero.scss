@@ -1,0 +1,42 @@
+.hero {
+    &__wrapper {
+        padding: 17px 0 200px 0;
+    }
+    &__content {
+        padding: 0 0 30px 0;
+    }
+    &__title {
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        color: $white;
+    }
+    &__name {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 200;
+        font-size: 200px;
+        line-height: 200px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        /* or 30px */
+        color: #FFFFFF;
+    }
+    &__button {
+        padding: 24px 111px;
+        background-color: #FCB500;
+        border-radius: 12px;
+    }
+}

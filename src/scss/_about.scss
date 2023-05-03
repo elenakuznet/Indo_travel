@@ -1,0 +1,68 @@
+.about {
+    padding-bottom: 40px;
+    &__image {
+        &--1 {
+            width: 220px;
+            height: 406px;
+        }
+    }
+}
+
+.grid   {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: 
+    '. . . . . . . . t t t t'
+    'c c c c c c . . t t t t '
+    '. . . text text text . . t t t t'
+    'palm palm palm palm palm monkey monkey monkey temple temple temple temple'
+    '. info info info . monkey monkey monkey . light light light';
+    align-items: center;
+}
+
+.about__content {
+    grid-area: c;
+    margin-bottom: 80px;
+}
+
+.about__image--1 {
+    grid-area: t;
+    width: 380px;
+    height: 700px;
+    margin-bottom: 100px;
+}
+
+.about__image--2 {
+    grid-area: palm;
+    width: 480px;
+    height: 313px;
+}
+
+.about__image--3 {
+    grid-area: monkey;
+    width: 280px;
+    height: 377px;
+}
+
+.about__image--4 {
+    grid-area: temple;
+    width: 380px;
+    height: 507px;
+    margin-bottom: 100px;
+}
+
+.about__image--5 {
+    grid-area: light;
+}
+
+.section__text {
+    grid-area: text;
+}
+
+.about__info {
+    grid-area: info;
+}
+
+
+
