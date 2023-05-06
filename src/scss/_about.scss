@@ -11,7 +11,7 @@
 .grid   {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    // grid-template-rows: repeat(12, 1fr);
     grid-template-areas: 
     '. . . . . . . . t t t t'
     'c c c c c c . . t t t t '
@@ -19,6 +19,7 @@
     'palm palm palm palm palm monkey monkey monkey temple temple temple temple'
     '. info info info . monkey monkey monkey . light light light';
     align-items: center;
+    margin-top: -78px;
 }
 
 .about__content {
@@ -63,6 +64,3 @@
 .about__info {
     grid-area: info;
 }
-
-
-
