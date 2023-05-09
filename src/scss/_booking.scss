@@ -3,5 +3,62 @@
     padding-bottom: 150px;
     &__wrapper {
         border: 1px solid #AFAFAF;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 60px 100px;
+        border-radius: 30px;
     }
+    &__title {
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 150%;
+        /* identical to box height, or 51px */
+        text-align: center;
+        letter-spacing: 0.02em;
+        margin-bottom: 60px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    &__options {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__choose {
+        // max-width: 221px;
+        width: 33%;
+    }
+    &__row {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 15px 33px;
+        gap: 12px;
+        border: 1px solid #AFAFAF;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+.phone {
+    width: 360px;
+}
+
+.email {
+    width: 360px;
+}
+
+.input {
+    border: 0;
 }

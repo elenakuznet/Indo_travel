@@ -4,20 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito:wght@200;300;700&display=swap" rel="stylesheet">
   <title>Indo travel</title>
   <link rel="stylesheet" href="css/index.min.css">
-  <script src="js/index.min.js"></script>
+  <script defer src="js/index.min.js"></script>
 </head>
 <body>
   <div class="wrapper">
-      <header class="header">
+    <header class="header">
     <div class="container">
       <div class="header__wrapper">
-        <img class="header__logo" src="img/logo.svg" alt="">
-        <img class="header__burger" src="img/menu.svg" alt="">
+        <img class="header__logo" src="./img/header/logo.svg" alt="">
+        <img class="header__burger" src="./img/header/menu.svg" alt="">
+        <div class="header__nav">
+          <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="">Индонезия</a></li>
+                <li class="nav__item"><a href="">Путешествие</a></li>
+                <li class="nav__item"><a href="">Тур 14 дней</a></li>
+                <li class="nav__item"><a href="">Почему мы?</a></li>
+                <li class="nav__item"><a href="">Фотоальбом</a></li>
+                <li class="nav__item"><a href="">Бронирование</a></li>
+                <li class="nav__item"><a href="">Контакты</a></li>
+            </ul>
+
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -33,7 +51,7 @@
     Вы точно запомните этот отдых навсегда.
               </p>
             </div>
-            <button class="button hero__button">Забронировать</button>
+            <a href="#booking" class="button hero__button">Забронировать</a>
         </div>
 
       </div>
@@ -44,7 +62,7 @@
       <div class="container">
         <div class="grid">
           <div class="about__content">
-              <h3 class="section__title" >Индонезия</h3>
+              <h2 class="section__title" >Индонезия</h2>
               <p class="section__subtitle">Незабываемая, чистая красота островов восхищает своей нетронутой природой 
             и культурными традициями.</p>
           </div>
@@ -62,7 +80,7 @@
     </section>
     <section class="travel">
       <div class="container">
-        <h3 class="section__title">Путешествие</h3>
+        <h2 class="section__title">Путешествие</h2>
         <p class="section__subtitle travel__subtitle">Посети это удивительное место, а мы покажем самые фантастические места.</p>
         <div class="travel__row">
           <div class="travel__acc">
@@ -83,23 +101,41 @@
     <section class="tur">
       <div class="container">
         <div class="tur__content">
-          <h3 class="section__title tur__title">Тур 14 дней</h3>
+          <h2 class="section__title tur__title">Тур 14 дней</h2>
           <p class="section__subtitle tur__subtitle">Думаем, показать тебе Индонезию лучше, чем рассказывать о ней.</p>
           <p class="tur__text">Выбери удобные даты, укажи количество людей, 
             и выбери дополнительные опции.</p>
         </div>
-        <div class="select">
-          <select name="" id="">Дата</select>
-          <select name="" id="">Люди</select>
-          <select name="" id="">Опции</select>
-          <button>Узнать цену</button>
+        <div class="tur__wrapper">
+          <div class="tur__box">
+            <form action="">
+              <div class="tur__options">
+                <label class="tur__row">Дата
+                  <input class="tur__input" type="date" name="date" placeholder="Выбери дату 
+                  путешествия" required>
+                  </label>
+              
+                <label class="tur__row">Люди
+                  <input class="tur__input" type="number" name="people" placeholder="Укажи количество 
+                  человек" required>
+                </label>
+            
+                <label class="tur__row">Опции
+                  <input class="tur__input" type="number" name="people" placeholder="Выбери нужные 
+                  опции" required>
+                </label>
+                <button class="button tur__button" type="submit">Узнать цену</button>
+              </div>
+            </form>
+          </div>
+          
         </div>
         
       </div>
     </section>
     <section class="whywe">
       <div class="container">
-        <h3 class="section__title whywe__title">Почему мы?</h3>
+        <h2 class="section__title whywe__title">Почему мы?</h2>
         <p class="section__subtitle whywe__subtitle">Мы знаем, как сделать ваше путешествие незабываемым.</p>
         <ul class="whywe__card">
           <li class="whywe__item card">
@@ -139,51 +175,72 @@
     </section>
     <section class="photo">
       <div class="container">
-        <h3 class="section__title">Фотоальбом</h3>
+        <h2 class="section__title">Фотоальбом</h2>
         <p class="section__subtitle">За годы поездок у нас накопилось много фотографий из Индонезии. Представляем их вам.</p>
       </div>
-      <div class="slider">
-        <img src="img/photo/photo_1.jpg" alt="">
-        <img src="img/photo/photo_2.jpg" alt="">
-        <img src="img/photo/photo_3.jpg" alt="">
-        <img src="img/photo/photo_4.jpg" alt="">
-        <img src="img/photo/photo_5.jpg" alt="">
-        <img src="img/photo/photo_6.jpg" alt="">
+      <div class="swiper swiper__container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/photo/photo_1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/photo/photo_2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/photo/photo_3.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/photo/photo_4.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/photo/photo_5.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/photo/photo_6.jpg" alt="">
+          </div>
+        </div>
+        <div class="button-right">
+          <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M35.75 44.4999C35.75 44.79 35.8652 45.0682 36.0704 45.2733C36.2755 45.4784 36.5537 45.5937 36.8438 45.5937H49.5159L44.8194 50.288C44.7177 50.3897 44.637 50.5105 44.582 50.6433C44.5269 50.7762 44.4986 50.9186 44.4986 51.0624C44.4986 51.2062 44.5269 51.3486 44.582 51.4815C44.637 51.6144 44.7177 51.7351 44.8194 51.8368C44.9211 51.9385 45.0418 52.0192 45.1747 52.0742C45.3075 52.1292 45.4499 52.1575 45.5937 52.1575C45.7376 52.1575 45.88 52.1292 46.0128 52.0742C46.1457 52.0192 46.2664 51.9385 46.3681 51.8368L52.9306 45.2743C53.0325 45.1727 53.1133 45.052 53.1684 44.9191C53.2236 44.7862 53.252 44.6438 53.252 44.4999C53.252 44.3561 53.2236 44.2136 53.1684 44.0807C53.1133 43.9478 53.0325 43.8271 52.9306 43.7255L46.3681 37.163C46.1627 36.9577 45.8842 36.8423 45.5937 36.8423C45.3033 36.8423 45.0248 36.9577 44.8194 37.163C44.614 37.3684 44.4986 37.647 44.4986 37.9374C44.4986 38.2279 44.614 38.5064 44.8194 38.7118L49.5159 43.4062H36.8438C36.5537 43.4062 36.2755 43.5214 36.0704 43.7265C35.8652 43.9316 35.75 44.2098 35.75 44.4999Z" fill="white"/>
+            <circle cx="45" cy="45" r="44.5" stroke="white"/>
+          </svg>
+        </div>
       </div>
     </section>
-    <section class="booking">
+    <section class="booking" id="booking">
       <div class="container">
         <div class="booking__wrapper">
-          <form action="https://jsonplaceholder.typicode.com/posts" method="post">
-            <div>
-              <label>Дата
-                <input type="date" name="date" required>
+          <p class="booking__title">Бронирование тура</p>
+          <form class="booking__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+            <div class="booking__options">
+              <label class="booking__choose booking__row">Дата
+                <input class="input" type="date" name="date" required>
                 </label>
-            </div>
-            <div>
-              <label>Люди
-                <input type="number" name="people" required>
+            
+              <label class="booking__choose booking__row">Люди
+                <input class="input" type="number" name="people"  required>
+              </label>
+          
+              <label class="booking__choose booking__row">Опции
+                <input class="input" type="number" name="people" required>
               </label>
             </div>
             <div>
-              <label>Опции
-                <input type="number" name="people" required>
+              <label class="booking__row">ФИО
+                <input class="input" type="text" name="name" placeholder="Введите ваше ФИО" required>
               </label>
             </div>
-            <div>
-              <label>ФИО
-                <input type="text" name="name" required>
+            <div class="booking__info">
+              <label class="booking__row phone" placeholder="Введите номер телефона">Телефон
+                <input class="input" type="tel" name="tel" placeholder="Введите номер телефона" required>
+              </label>
+              <label class="booking__row email">E-mail
+                <input class="input" type="email" name="email" placeholder="Введите адрес электронной почты" required>
               </label>
             </div>
-            <div>
-              <label>Телефон
-                <input type="tel" name="tel" required>
-              </label>
-              <label>E-mail
-                <input type="email" name="email" required>
-              </label>
-            </div>
-            <button type="submit">Забронировать</button>
+            <p>24 ноября - 7 декабря, 4 человека
+              459 590₽</p>
+            <button class="button hero__button" type="submit">Забронировать</button>
           </form>
           
         </div>
@@ -196,7 +253,7 @@
       <div class="footer__wrapper">
           <img class="footer__logo" src="img/header/logo.svg" alt="">
           <div class="footer__menu">
-            <h4 class="menu__title">Меню</h4>
+            <h4 class="menu__title footer__title">Меню</h4>
             <nav class="menu__navigation">
               <ul class="menu__list">
                 <li class="menu__item"><a href="">Индонезия</a></li>
@@ -210,9 +267,12 @@
             </nav>
         </div>
         <div class="footer__contacts">
-          <h4>Контакты</h4>
-          <a href="">Тел: +7 937 839 23-61</a>
-          <a href="">Email: IndoTravel@gmail.com</a>
+          <h4 class="footer__title">Контакты</h4>
+          <div class="footer__mobile">
+            <a href="">Тел: +7 937 839 23-61</a>
+            <a href="">Email: IndoTravel@gmail.com</a>
+          </div>
+          
           <ul class="social">
             <li class="social__item">
               <a class="social__link" href="https://whatsapp.com" target="_blank">
@@ -254,11 +314,13 @@
         </ul>
         </div>
         <div class="footer__question">
-          <h4>Есть вопросы по туру?</h4>
-          <p>Введите свой Email и мы свяжемся с вами в течении 3 рабочих дней</p>
-          <form action="">
-            <input type="text">
-            <button type="submit"></button>
+          <h4 class="footer__title">Есть вопросы по туру?</h4>
+          <p class="footer__text">
+            Введите свой Email и мы свяжемся с вами в течении 3 рабочих дней
+          </p>
+          <form action="https://jsonplaceholder.typicode.com/posts" method="post">
+            <input type="text" placeholder="Введите адрес электронной почты">
+            <button class="footer__botton" type="submit"></button>
           </form>
         </div>
         <div class="footer__copyright">

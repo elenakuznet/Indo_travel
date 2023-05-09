@@ -1,0 +1,23 @@
+.swiper {
+    // width: 1440px;
+    height: 500px;
+}
+
+.swiper__container {
+    position: relative;
+}
+
+.button-right {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    right: 9%;
+    top: calc(50% - 45px);
+    z-index: 10;
+    cursor: pointer;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // border: none;
+    background-color: transparent;
+}

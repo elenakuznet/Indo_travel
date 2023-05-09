@@ -3,6 +3,12 @@
     background: url('../img/footer/footer-bg.jpg');
     background-size: cover;
     color: $white;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+
     &__wrapper {
         display: grid;
         grid-template-areas: 
@@ -27,30 +33,31 @@
     &__list {
         grid-area: design;
     }
+    &__title {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        margin-bottom: 20px;
+    }
+    &__mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    &__text {
+        white-space: pre-line;
+        max-width: 280px;
+    }
 }
 
-
-.menu__title {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 150%;
-    margin-bottom: 20px;
-}
 
 .menu__list {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.menu__item {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 150%;
 }
 
 
