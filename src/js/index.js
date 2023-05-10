@@ -1,4 +1,17 @@
 
+// Accordion
+
+$('.acc__item').accordion({
+  active: true,
+  collapsible: true,
+  heightStyle: 'content',
+  icons: {
+      header: 'acc__accord',
+      activeHeader: 'acc__accord, acc__accord--active',  
+  },
+});
+
+
 
 // Swiper
 const swiper = new Swiper('.swiper', {
