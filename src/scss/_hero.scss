@@ -18,6 +18,8 @@
         color: $white;
     }
     &__name {
+        margin-left: -17px;
+        display: inline-block;
         font-family: 'Nunito';
         font-style: normal;
         font-weight: 200;

@@ -6,6 +6,9 @@
             height: 406px;
         }
     }
+    &__sub {
+        padding-bottom: 20px;
+    }
 }
 
 .grid   {
@@ -24,7 +27,9 @@
 
 .about__content {
     grid-area: c;
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
+    // margin-bottom: 44px;
+    // margin-bottom: 20px;
 }
 
 .about__image--1 {

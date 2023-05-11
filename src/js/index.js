@@ -1,8 +1,8 @@
 
 // Accordion
 
-$('.acc__item').accordion({
-  active: true,
+$('.acc').accordion({
+  active: 0,
   collapsible: true,
   heightStyle: 'content',
   icons: {
