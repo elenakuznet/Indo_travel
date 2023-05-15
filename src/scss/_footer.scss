@@ -8,6 +8,18 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 150%;
+    @include laptop {
+        padding: 80px 0 40px 0;
+    }
+    @include tablet {
+        padding: 50px 0;
+        font-size: 14px;
+        
+    }
+    @include mobile {
+        padding: 20px 0;
+        font-size: 12px;
+    }
 
     &__wrapper {
         display: grid;
@@ -15,25 +27,90 @@
         'logo menu contact question'
         'copyright menu . design';
         justify-content: space-between;
+        @include laptop {
+            grid-template-areas: 
+            'logo menu contact'
+            '. menu question'
+            'copyright . design';
+        }
+        @include tablet {
+            grid-template-areas: 
+            'logo menu contact'
+            '. question question'
+            'copyright . design';
+        }
+        @include mobile {
+            grid-template-areas:
+            'logo logo'
+            'menu contact'
+            'question question'
+            'copyright .'
+            'design .';
+        }
     }
     &__logo {
         grid-area: logo;
+        @include laptop {
+            width: 140px;
+            height: 27px;
+        }
+        @include tablet {
+            width: 137.51px;
+            height: 24.95px;
+        }
+        @include mobile {
+            width: 104px;
+            height: 20px;
+            margin-bottom: 25px;
+        }
     }
     &__menu {
         grid-area: menu;
+        @include tablet {
+            margin-bottom: 40px;
+        }
+        @include mobile {
+            margin-bottom: 28px;
+        }
+
     }
     &__contacts {
         grid-area: contact;
+        @include laptop {
+            margin-bottom: 60px;
+        }
     }
     &__question {
         grid-area: question;
         margin-bottom: 100px;
+        @include laptop {
+            margin-bottom: 62px;
+        }
+        @include tablet {
+            margin-bottom: 50px;
+        }
+        @include mobile {
+            margin-bottom: 52px;
+        }
     }
     &__copyright {
         grid-area: copyright;
+        font-weight: 700;
+        line-height: 130%;
+        font-size: 16px;
+        @include mobile {
+            margin-bottom: 20px;
+            font-size: 10px;
+        }
     }
     &__list {
         grid-area: design;
+        font-weight: 700;
+        line-height: 130%;
+        font-size: 16px;
+        @include mobile {
+            font-size: 10px;
+        }
     }
     &__title {
         font-family: 'Nunito';
@@ -42,12 +119,33 @@
         font-size: 20px;
         line-height: 150%;
         margin-bottom: 20px;
+        @include tablet {
+            font-size: 16px;
+        }
+        @include mobile {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
     }
     &__mobile {
         display: flex;
         flex-direction: column;
         gap: 15px;
         margin-bottom: 30px;
+        @include tablet {
+            margin-bottom: 20px;
+        }
+        @include mobile {
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+    }
+    &__link {
+        // font-weight: 700;
+        // line-height: 130%;
+        // @include tablet {
+        //     font-size: 16px;
+        // }
     }
     &__text {
         // white-space: pre-line;
@@ -68,6 +166,16 @@
         background-color: $accent;
         display: inline-block;
         border: 0;
+        @include tablet {
+            width: 82px;
+            height: 52px;
+            padding: 8px 23px;
+        }
+        @include mobile {
+            width: 67px;
+            height: 42px;
+            padding: 9px 22px;
+        }
     }
 }
 
@@ -75,6 +183,10 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @include tablet {
+        gap: 10px;
+        // margin-bottom: 40px;
+    }
 }
 
 

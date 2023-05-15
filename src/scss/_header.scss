@@ -4,10 +4,35 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include laptop {
+            padding: 38px 0 45px 0;
+        }
+        @include tablet {
+            padding: 38px 0 36px 0;
+        }
+        @include mobile {
+            padding: 20px 0 23px 0;
+        }
     }
     &__logo {
         width: 176px;
         height: 34px;
+        @include laptop {
+            width: 140px;
+            height: 27px;
+        }
+        @include mobile {
+            width: 104px;
+            height: 20px;
+        }
+    }
+    &__burger {
+        width: 35px;
+        height: 16px;
+        @include mobile {
+            width: 22px;
+            height: 11px;
+        }
     }
     &__nav {
         display: none;

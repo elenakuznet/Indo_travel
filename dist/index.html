@@ -12,7 +12,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito:wght@200;300;700&display=swap" rel="stylesheet">
   <title>Indo travel</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"
+/>
   <link rel="stylesheet" href="css/index.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
   <script defer src="js/index.min.js"></script>
 </head>
 <body>
@@ -144,18 +149,28 @@
             <form action="">
               <div class="tur__options">
                 <label class="tur__row">Дата
-                  <input class="tur__input" type="date" name="date" placeholder="Выбери дату 
-                  путешествия" required>
+                  <input class="tur__input" type="date" name="date" placeholder="Выбери дату путешествия" required>
                   </label>
-              
+                
                 <label class="tur__row">Люди
-                  <input class="tur__input" type="number" name="people" placeholder="Укажи количество 
-                  человек" required>
+                  <select name="Люди" id="people" class="default" placeholder="Укажи количество 
+                  человек">
+                    <option value="">Укажи количество человек</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
                 </label>
+              
+                <!-- <label class="tur__row">Люди
+                  <input class="tur__input" type="number" name="people" placeholder="Укажи количество человек" required>
+                </label> -->
             
                 <label class="tur__row">Опции
-                  <input class="tur__input" type="number" name="people" placeholder="Выбери нужные 
-                  опции" required>
+                  <input class="tur__input" type="number" name="people" placeholder="Выбери нужные опции" required>
                 </label>
                 <button class="button tur__button" type="submit">Узнать цену</button>
               </div>
@@ -251,7 +266,8 @@
                 </label>
             
               <label class="booking__choose booking__row">Люди
-                <input class="input" type="number" name="people"  required>
+                <input class="input people__input" type="number" name="people" placeholder="Укажи количество 
+                человек"  required>
               </label>
           
               <label class="booking__choose booking__row">Опции
