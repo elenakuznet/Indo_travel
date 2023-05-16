@@ -3,18 +3,9 @@
     @include laptop {
         padding-bottom: 30px;
     }
-    &__image {
-        // &--1 {
-        //     width: 220px;
-        //     height: 406px;
-        //     @include laptop {
-        //         width: 220px;
-        //         height: 406px;
-        //     }
-        // }
-    }
+
     &__sub {
-        padding-bottom: 20px;
+        // padding-bottom: 20px;
     }
 }
 
@@ -23,24 +14,42 @@
     grid-template-columns: repeat(12, 1fr);
     column-gap: 20px;
     // grid-template-rows: repeat(12, 1fr);
+    // grid-template-areas: 
+    // '. . . . . . . . t t t t'
+    // 'c c c c c c . . t t t t '
+    // '. . . text text text . . t t t t'
+    // 'palm palm palm palm palm monkey monkey monkey temple temple temple temple'
+    // '. info info info . monkey monkey monkey . light light light';
     grid-template-areas: 
     '. . . . . . . . t t t t'
     'c c c c c c . . t t t t '
     '. . . text text text . . t t t t'
     'palm palm palm palm palm monkey monkey monkey temple temple temple temple'
+    '. info info info . monkey monkey monkey . . . .'
     '. info info info . monkey monkey monkey . light light light';
     align-items: center;
     margin-top: -78px;
-    // @include laptop {
-    //     grid-template-columns: repeat(12, 1fr) ;
-    //     grid-template-areas: 
-    //     '. . . . . . . . t t t t'
-    //     'c c c c c c c . t t t t'
-    //     '. . . text text text text t t t t'
-    //     'palm palm palm palm palm monkey monkey monkey temple temple temple temple'
-    //     'info info info info . monkey monkey monkey . light light light';
-    //     margin-top: -56px;
-    // }
+    @include laptop {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 
+        '. . . . . . . . t t t t'
+        'c c c c c c c . t t t t'
+        '. . . text text text text . t t t t'
+        'palm palm palm palm palm monkey monkey monkey temple temple temple temple'
+        'info info info info . monkey monkey monkey . light light light';
+        margin-top: -56px;
+    }
+    @include tablet {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas: 
+        '. . . . . . t t t'
+        'c c c c c . t t t'
+        '. text text text text . t t t'
+        'palm palm palm palm monkey monkey temple temple temple'
+        'info info info info monkey monkey light light light';
+    }
+    
 }
 
 .about__content {
@@ -60,6 +69,10 @@
         height: 552px;
         margin-bottom: 80px;
     }
+    @include tablet {
+        width: 220px;
+        height: 406px;
+    }
 
 }
 
@@ -67,9 +80,14 @@
     grid-area: palm;
     width: 480px;
     height: 313px;
+    margin-bottom: 100px;
     @include laptop {
         width: 380px;
         height: 247px;
+    }
+    @include tablet {
+        width: 300px;
+        height: 195px;
     }
 }
 
@@ -77,9 +95,14 @@
     grid-area: monkey;
     width: 280px;
     height: 377px;
+    margin-bottom: 36px;
     @include laptop {
         width: 220px;
         height: 297px;
+    }
+    @include tablet {
+        width: 140px;
+        height: 189px;
     }
 }
 
@@ -92,6 +115,10 @@
         width: 300px;
         height: 401px;
     }
+    @include tablet {
+        width: 220px;
+        height: 295px;
+    }
 }
 
 .about__image--5 {
@@ -100,27 +127,33 @@
         width: 220px;
         height: 208px;
     }
+    @include tablet {
+        width: 220px;
+        height: 208px;
+    }
 }
 
 .section__text {
     grid-area: text;
+    margin-bottom: 17px;
     @include laptop {
         // min-width: 300px;
     }
 }
 
 .about__info {
+    transform: translateY(-100px);
     grid-area: info;
 }
 
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat (12, 1fr);
-        grid-template-areas: 
-        '. . . . . . . . t t t t'
-        'c c c c c c c . t t t t'
-        '. . . text text text text t t t t'
-        'palm palm palm palm palm monkey monkey monkey temple temple temple temple'
-        'info info info info . monkey monkey monkey . light light light';
-    }
-}
+// @media (max-width: 1024px) {
+//     .grid {
+//         grid-template-columns: repeat (12, 1fr);
+//         grid-template-areas: 
+//         '. . . . . . . . t t t t'
+//         'c c c c c c c . t t t t'
+//         '. . . text text text text t t t t'
+//         'palm palm palm palm palm monkey monkey monkey temple temple temple temple'
+//         'info info info info . monkey monkey monkey . light light light';
+//     }
+// }
