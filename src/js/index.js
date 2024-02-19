@@ -12,11 +12,10 @@ $('.acc').accordion({
 });
 
 
-
 // Swiper
 const swiper = new Swiper('.swiper', {
     // Optional parameters
-    slidesPerView: 1.4,
+    slidesPerView: 1.3,
     loop: true,
 
     
@@ -40,3 +39,26 @@ const swiper = new Swiper('.swiper', {
   };
 
   defaultSelect();
+
+
+  // const optionInput = document.querySelector('.options-input');
+  // const options = document.querySelector('.options');
+
+  // optionInput.onclick = function() {
+  //   console.log('Кнопка нажата!');
+  //   options.style.display = 'block';
+  // }
+
+// .onclick = function() {
+//     entityInputs.hidden = true;
+// }
+
+  // const optionsSelect = () => {
+  //   const option = document.querySelector('.option');
+  //   const optionChoices = new Choices(option, {
+  //     searchEnabled: false,
+  //     itemSelectText: '',
+  //   });
+  // }
+
+  // optionsSelect();

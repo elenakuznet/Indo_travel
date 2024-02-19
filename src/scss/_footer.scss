@@ -50,6 +50,8 @@
     }
     &__logo {
         grid-area: logo;
+        width: 172.87px;
+        height: 31.42px;
         @include laptop {
             width: 140px;
             height: 27px;
