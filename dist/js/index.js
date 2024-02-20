@@ -8539,21 +8539,63 @@ var __webpack_exports__ = {};
 }();
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 !function() {
+// Accordion
+
+$('.acc').accordion({
+  active: 0,
+  collapsible: true,
+  heightStyle: 'content',
+  icons: {
+    header: 'acc__accord',
+    activeHeader: 'acc__accord, acc__accord--active'
+  }
+});
+
 // Swiper
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'vertical',
+  slidesPerView: 1.3,
   loop: true,
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+    nextEl: '.button-right'
   },
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar'
-  }
+  mousewheel: true,
+  keyboard: true
 });
+
+// Select 
+
+const defaultSelect = () => {
+  const element = document.querySelector('.default');
+  const choices = new Choices(element, {
+    searchEnabled: false,
+    itemSelectText: ''
+  });
+};
+defaultSelect();
+
+// const optionInput = document.querySelector('.options-input');
+// const options = document.querySelector('.options');
+
+// optionInput.onclick = function() {
+//   console.log('Кнопка нажата!');
+//   options.style.display = 'block';
+// }
+
+// .onclick = function() {
+//     entityInputs.hidden = true;
+// }
+
+// const optionsSelect = () => {
+//   const option = document.querySelector('.option');
+//   const optionChoices = new Choices(option, {
+//     searchEnabled: false,
+//     itemSelectText: '',
+//   });
+// }
+
+// optionsSelect();
 }();
 /******/ })()
 ;
