@@ -1,136 +1,307 @@
 .tur {
-    padding-top: 100px;
-    background-image: url('../img/tur/tur-bg.jpg');
-    background-size: cover;
-    &__content {
-        margin-bottom: 80px;
+  padding-top: 100px;
+  background-image: url("../img/tur/tur-bg.jpg");
+  background-size: cover;
+  @include laptop {
+    padding-top: 80px;
+  }
+  &__container {
+    @include tablet {
+      display: flex;
     }
-    &__title {
-        margin-bottom: 60px;
-        color: $white;
+  }
+  &__content {
+    margin-bottom: 80px;
+    @include laptop {
+      max-width: 540px;
     }
-    &__subtitle {
-        // margin-bottom: 80px;
-        max-width: 580px;
-        color: $white;
+  }
+  &__title {
+    margin-bottom: 60px;
+    color: $white;
+    @include laptop {
+      margin-bottom: 40px;
     }
-    &__text {
-        max-width: 480px;
-        color: $white;
+  }
+  &__subtitle {
+    // margin-bottom: 80px;
+    max-width: 580px;
+    color: $white;
+  }
+  &__text {
+    max-width: 480px;
+    color: $white;
+  }
+  &__wrapper {
+    padding: 68px 60px;
+    background: rgba(230, 205, 173, 0.3);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 30px 30px 0px 0px;
+    @include laptop {
+      padding: 50px 60px;
     }
-    &__wrapper {
-        padding: 68px 60px;
-        background: rgba(230, 205, 173, 0.3);
-        backdrop-filter: blur(5px);
-        /* Note: backdrop-filter has minimal browser support */
-        border-radius: 30px 30px 0px 0px;
+    @include tablet {
+      padding: 30px;
     }
-    &__box {
-        padding: 23px 38px;
-        background: rgba(33, 25, 25, 0.78);
-        border-radius: 20px;
+  }
+  &__box {
+    padding: 23px 38px;
+    background: rgba(33, 25, 25, 0.78);
+    border-radius: 20px;
+    @include laptop {
+      padding: 23px 20px 20px 20px;
     }
-    &__options {
-        display: flex;
-        justify-content: space-between;
+  }
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
     }
-    &__row {
-        display: flex;
-        flex-direction: column;
-        color: $white;
-        gap: 12px;
-        font-weight: 700;
-        font-size: 16px;
-        // line-height: 130%;
-        line-height: 86%;
-        padding-top: 10px;
-    }
-    &__input {
-        min-height: 42px;
-        border: 0;
-        background: transparent;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 130%;
-        opacity: 0.7;
-    }
-    &__button {
-        padding: 22px 56px;
-        background: #FCB500;
-        border-radius: 12px;
-        border: 0;
-        font-family: 'Nunito';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 130%;
-        /* or 23px */
-        color: $white;
-        display: block;
-        height: 67px;
-    }
-}
-
-.choices {
-    width: 217px;  
-}
-
-.choices__inner {
-    background-color: transparent;
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    // line-height: 130%;
+    line-height: 86%;
+    padding-top: 10px;
+  }
+  &__input {
+    min-height: 42px;
     border: 0;
-    position: relative;
-    z-index: 2;
+    background: transparent;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    opacity: 0.7;
+  }
+  &__button {
+    padding: 22px 56px;
+    background: #fcb500;
+    border-radius: 12px;
+    border: 0;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    /* or 23px */
+    color: $white;
+    display: block;
+    // height: 67px;
+    @include laptop {
+      padding: 13px 41px;
+    }
+  }
 }
 
-.choices__list--dropdown {
-    width: 49px;
+.people {
+  position: relative;
 }
 
-.choices[data-type*=select-one]:after {
-    width: 14px;
-    height: 14px;
-    z-index: 3;
-    top: 40%;
-    border: 1px solid white;
-    border-width: 0 0 1px 1px;
-    transform: rotate(-45deg);
+.people__wrapper {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  padding: 20px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.3);
+  background: rgb(255, 255, 255);
+  color: rgb(48, 48, 48);
+  display: none;
+  //   height: 0;
 }
 
-.choices[data-type*=select-one].is-open:after {
-    top: 60%;
-    border: 1px solid $accent;
-    border-width: 1px 1px 0 0;
+.people__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.choices__list--dropdown {
-    top: calc(100% - 30px);
-    padding-top: 30px;
+.people__item {
+  cursor: pointer;
 }
 
-.choices__placeholder {
-    opacity: 1;
+.number-active {
+  color: rgb(252, 181, 0);
 }
 
-.choices__list--dropdown .choices__placeholder {
-    display: none;
-}
+// Стили для библиотеки choises
+// .choices {
+//     width: 217px;
+//     @include laptop {
+//         width: 170px;
+//     }
+// }
 
-.is-open .choices__list--dropdown {
-    background: #FFFFFF;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
-    color: black;
-    border-top: 0px;
-    border: none;
-}
+// .choices__inner {
+//     background-color: transparent;
+//     border: 0;
+//     position: relative;
+//     z-index: 2;
+// }
 
-.choices__list--dropdown .choices__list--selectable {
-    padding-right: 10px;
-}
+// .choices__list--dropdown {
+//     width: 49px;
+// }
+
+// .choices[data-type*=select-one]:after {
+//     width: 14px;
+//     height: 14px;
+//     z-index: 3;
+//     top: 40%;
+//     border: 1px solid white;
+//     border-width: 0 0 1px 1px;
+//     transform: rotate(-45deg);
+// }
+
+// .choices[data-type*=select-one].is-open:after {
+//     top: 60%;
+//     border: 1px solid $accent;
+//     border-width: 1px 1px 0 0;
+// }
+
+// .choices__list--dropdown {
+//     top: calc(100% - 30px);
+//     padding-top: 30px;
+// }
+
+// .choices__placeholder {
+//     opacity: 1;
+// }
+
+// .choices__list--dropdown .choices__placeholder {
+//     display: none;
+// }
+
+// .is-open .choices__list--dropdown {
+//     background: #FFFFFF;
+//     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+//     color: black;
+//     border-top: 0px;
+//     border: none;
+// }
+
+// .choices__list--dropdown .choices__list--selectable {
+//     padding-right: 10px;
+// }
 
 .options {
-    display: none;
+  position: relative;
 }
 
 // .options-form {
 //     display: flex;
 // }
+
+.option__wrapper {
+  position: absolute;
+  // top: 0;
+  top: 150%;
+  right: 0;
+  padding: 20px 10px 20px 20px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.3);
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: rgb(48, 48, 48);
+  display: none;
+}
+
+.options-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.active {
+  display: block;
+}
+
+.options__checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(48, 48, 48);
+  margin-right: 10px;
+}
+
+.options__button {
+  border-radius: 8px;
+  background: rgb(252, 181, 0);
+  padding: 10px 30px 10px 30px;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.list-items {
+  position: relative;
+  // margin-top: 15px;
+  // background-color: #fff;
+  // box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+  // border-radius: 8px;
+  // padding: 16px;
+  list-style: none;
+  // display: none;
+}
+
+.select-btn.open ~ .list-items {
+  display: block;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  gap: 20px;
+  // padding: 0 15px;
+  // border-radius: 8px;
+}
+
+.item:hover {
+  background-color: #e7edfe;
+}
+
+.item-text {
+  color: rgb(48, 48, 48);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  //   width: 16px;
+  height: 16px;
+  border: 1px solid rgb(48, 48, 48);
+  transition: all 0.3s ease-in-out;
+  vertical-align: bottom;
+}
+
+.item.checked .checkbox {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(252, 181, 0);
+}
+
+.checkbox .check-icon {
+  color: rgb(252, 181, 0);
+  font-size: 11px;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.item.checked .check-icon {
+  transform: scale(1);
+}
