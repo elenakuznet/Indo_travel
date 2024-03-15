@@ -1,16 +1,14 @@
 // colors
 
-$white: #FFF;
-$accent: #FCB500;
+$white: #fff;
+$accent: #fcb500;
 $primaryDark: #303030;
-$borderColor: #AFAFAF;
-
+$borderColor: #afafaf;
 
 // fonts
 
-$font-main: 'Nunito', sans-serif;
-$font-secondary: 'Merriweather', serif;
-
+$font-main: "Nunito", sans-serif;
+$font-secondary: "Merriweather", serif;
 
 $mobile: 480px;
 $tablet: 768px;
@@ -65,6 +63,6 @@ $desktop: 1280px;
     weight: $weight;
     display: swap;
   }
-  src: url("../fonts/#{ $name }-#{ $weight }.woff2")  format("woff2"),
-    url("../fonts/#{ $name }-#{ $weight }.woff")  format("woff"),
+  src: url("../fonts/#{ $name }-#{ $weight }.woff2") format("woff2"),
+    url("../fonts/#{ $name }-#{ $weight }.woff") format("woff");
 }

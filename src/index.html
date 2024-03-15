@@ -216,17 +216,18 @@
           </div>
           <div class="tur__wrapper">
             <div class="tur__box">
-              <form action="" id="turform">
+              <div action="" id="turform">
                 <div class="tur__options">
-                  <label class="tur__row"
+                  <label class="tur__row date"
                     >Дата
-                    <input
-                      class="tur__input"
-                      type="date"
-                      name="date"
-                      placeholder="Выбери дату путешествия"
-                      required
-                    />
+                    <div class="tur__input people__input">
+                      Выбери дату путешествия
+                    </div>
+
+                    <div class="date__wrapper">
+                      <h4 class="date__title">Свободные даты</h4>
+                      <div class="month__wrapper"></div>
+                    </div>
                   </label>
 
                   <label class="tur__row people"
@@ -261,78 +262,53 @@
                     </select> -->
                   </label>
 
-                  <label for="" class="tur__row options"
+                  <label class="tur__row options"
                     >Опции
-                    <!-- <input type="text" class="tur__input options-input" placeholder="Выбери нужные опции"> -->
                     <div class="tur__input options-input">
                       Выбери нужные опции
                     </div>
                     <div class="option__wrapper">
                       <h4>Опции</h4>
                       <ul class="list-items">
-                        <li class="item">
+                        <li class="list-items__item">
                           <span class="checkbox">
                             <i class="fa-solid fa-check check-icon"></i>
                           </span>
                           <span class="item-text">Няня</span>
                         </li>
 
-                        <li class="item">
+                        <li class="list-items__item">
                           <span class="checkbox">
                             <i class="fa-solid fa-check check-icon"></i>
                           </span>
                           <span class="item-text">Персональное меню</span>
                         </li>
 
-                        <li class="item">
+                        <li class="list-items__item">
                           <span class="checkbox">
                             <i class="fa-solid fa-check check-icon"></i>
                           </span>
                           <span class="item-text">Персональный гид</span>
                         </li>
 
-                        <li class="item">
+                        <li class="list-items__item">
                           <span class="checkbox">
                             <i class="fa-solid fa-check check-icon"></i>
                           </span>
                           <span class="item-text">Улучшенная палатка</span>
                         </li>
                       </ul>
+                      <div class="button options__button" id="options-cancel">
+                        Готово
+                      </div>
                     </div>
                   </label>
 
-                  <!-- <label class="tur__row options">Опции
-                  <input type="text" class="tur__input options-input" placeholder="Выбери нужные опции">
-                  <div class="option__wrapper">
-                    <div class="options-form">
-                      <h3>Опции</h3>
-                      <label for="" class="options__label">
-                        <input type="checkbox" class="options__checkbox" name="option" value="nanny" form="turform"> 
-                        <span>Няня</span>
-                      </label>
-
-                      <label for="" class="options__label">
-                        <input type="checkbox" class="options__checkbox" name="option" value="menu" form="turform">
-                        <span>Персональное меню</span>
-                      </label>
-
-                      <label for="" class="options__label">
-                        <input type="checkbox" class="options__checkbox" name="option" value="guide" form="turform">Персональный гид
-                      </label>
-
-                      <label for="" class="options__label">
-                        <input type="checkbox" class="options__checkbox" name="option" value="tent" form="turform">Улучшенная палатка
-                      </label>
-
-                      <button type="submit" class="button options__button">Готово</button>
-                      </div>
-                  </div>
-                </label> -->
                   <button class="button tur__button" type="submit">
                     Узнать цену
                   </button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>

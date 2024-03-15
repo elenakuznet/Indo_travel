@@ -552,7 +552,7 @@ body {
   font-size: 18px;
   font-weight: 300;
   color: #303030;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 img {
@@ -677,7 +677,7 @@ iframe {
 
 .nav {
   padding: 30px 35px;
-  background-color: #FCB500;
+  background-color: #fcb500;
   -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
   border-radius: 20px 0px;
@@ -695,7 +695,7 @@ iframe {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 15px;
-  color: #FFF;
+  color: #fff;
 }
 
 .hero__wrapper {
@@ -724,7 +724,7 @@ iframe {
   font-size: 40px;
   line-height: 130%;
   letter-spacing: 0.02em;
-  color: #FFF;
+  color: #fff;
 }
 
 .hero__name {
@@ -737,7 +737,7 @@ iframe {
   line-height: 200px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
   margin-bottom: 10px;
 }
 
@@ -748,7 +748,7 @@ iframe {
   font-size: 20px;
   line-height: 150%;
   /* or 30px */
-  color: #FFF;
+  color: #fff;
   white-space: pre-line;
 }
 
@@ -766,7 +766,7 @@ iframe {
   font-size: 18px;
   line-height: 150%;
   /* identical to box height, or 27px */
-  color: #FFF;
+  color: #fff;
 }
 
 .about {
@@ -854,7 +854,7 @@ iframe {
   top: 0;
   width: 2px;
   height: 96%;
-  background-color: #FCB500;
+  background-color: #fcb500;
 }
 
 .travel__row {
@@ -944,17 +944,17 @@ iframe {
 
 .tur__title {
   margin-bottom: 60px;
-  color: #FFF;
+  color: #fff;
 }
 
 .tur__subtitle {
   max-width: 580px;
-  color: #FFF;
+  color: #fff;
 }
 
 .tur__text {
   max-width: 480px;
-  color: #FFF;
+  color: #fff;
 }
 
 .tur__wrapper {
@@ -989,7 +989,7 @@ iframe {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #FFF;
+  color: #fff;
   gap: 12px;
   font-weight: 700;
   font-size: 16px;
@@ -1018,7 +1018,7 @@ iframe {
   font-size: 18px;
   line-height: 130%;
   /* or 23px */
-  color: #FFF;
+  color: #fff;
   display: block;
 }
 
@@ -1028,8 +1028,10 @@ iframe {
 
 .people__wrapper {
   position: absolute;
-  top: 150%;
-  right: 0;
+  top: 120%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
   padding: 20px;
   -webkit-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.3);
@@ -1063,8 +1065,12 @@ iframe {
 
 .option__wrapper {
   position: absolute;
-  top: 150%;
-  right: 0;
+  top: 120%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  width: 219px;
+  height: 288px;
   padding: 20px 10px 20px 20px;
   -webkit-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.3);
@@ -1109,18 +1115,20 @@ iframe {
   padding: 10px 30px 10px 30px;
   color: rgb(255, 255, 255);
   border: none;
+  text-align: center;
 }
 
 .list-items {
   position: relative;
   list-style: none;
+  margin-bottom: 10px;
 }
 
 .select-btn.open ~ .list-items {
   display: block;
 }
 
-.item {
+.list-items__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1134,7 +1142,7 @@ iframe {
   gap: 20px;
 }
 
-.item:hover {
+.list-items__item:hover {
   background-color: #e7edfe;
 }
 
@@ -1165,7 +1173,7 @@ iframe {
   vertical-align: bottom;
 }
 
-.item.checked .checkbox {
+.list-items__item.checked .checkbox {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(252, 181, 0);
 }
@@ -1179,9 +1187,38 @@ iframe {
   transition: all 0.3s ease-in-out;
 }
 
-.item.checked .check-icon {
+.list-items__item.checked .check-icon {
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+.date__wrapper {
+  position: absolute;
+  top: 71%;
+  left: 0;
+  -webkit-transform: translateX(24%);
+  transform: translateX(24%);
+  width: 282px;
+  height: 381px;
+  background-color: white;
+  padding: 20px;
+  color: black;
+}
+
+.date__title {
+  margin-bottom: 20px;
+}
+
+.month__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+  color: grey;
 }
 
 .whywe {
@@ -1397,7 +1434,7 @@ iframe {
   padding: 80px 0;
   background: url("../img/footer/footer-bg.jpg");
   background-size: cover;
-  color: #FFF;
+  color: #fff;
   font-family: "Nunito";
   font-style: normal;
   font-weight: 300;
@@ -1472,20 +1509,20 @@ iframe {
 }
 
 .footer__form {
-  border-bottom: 1px solid #AFAFAF;
+  border-bottom: 1px solid #afafaf;
 }
 
 .footer__input {
   background-color: transparent;
   border: 0;
   width: 300px;
-  color: #FFF;
+  color: #fff;
 }
 
 .footer__button {
   padding: 13px 32px 14px 32px;
   border-radius: 8px;
-  background-color: #FCB500;
+  background-color: #fcb500;
   display: inline-block;
   border: 0;
 }
